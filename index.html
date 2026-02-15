@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Anniversary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ❤️ Surprise Popup -->
+<div id="popup">
+  <div class="popup-content">
+    <h2>Surprise for you 🎁❤️</h2>
+    <button onclick="startSurprise()">Open</button>
+  </div>
+</div>
+
+<!-- 🎬 Cinematic Parents Name -->
+<div id="cinematic">
+  <div class="cinematic-box">
+    <h1 class="name-animation">Milind ❤️ Swati</h1>
+    <p class="tap-text" onclick="enterSite()">Tap to continue</p>
+  </div>
+</div>
+
+<!-- ❤️ Floating Hearts -->
+<div class="hearts">
+  <span>❤️</span>
+  <span>💖</span>
+  <span>💘</span>
+  <span>💕</span>
+  <span>💓</span>
+</div>
+
+<!-- 🌸 HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Happy 24th Anniversary ❤️</h1>
+    <p>Celebrating Love Since 2002</p>
+    <h3>15 February 2026</h3>
+    <div class="scroll-down">Scroll ↓</div>
+  </div>
+</section>
+
+<!-- 📸 SLIDESHOW GALLERY -->
+<section class="gallery">
+  <h2>Beautiful Memories</h2>
+
+  <div class="slideshow">
+    <img class="slide active" src="images/photo1.jpg">
+    <img class="slide" src="images/photo2.jpg">
+    <img class="slide" src="images/photo3.jpg">
+    <img class="slide" src="images/photo4.jpg">
+  </div>
+</section>
+
+<!-- 🕉️ MAHASHIVRATRI -->
+<section class="festival">
+  <h2>Mahashivratri Blessings</h2>
+  <p>May Lord Shiva bless your bond forever with love and happiness.</p>
+</section>
+
+<!-- 💌 MESSAGE -->
+<section class="message">
+  <h2>Thank You Aai & Baba</h2>
+  <p>You both are our biggest blessing ❤️</p>
+</section>
+
+<!-- 🌟 FINAL SURPRISE SCREEN -->
+<section class="final-surprise">
+  <div class="final-content">
+    <h1>Best Parents in the World ❤️</h1>
+    <p>Made with love for your 24th Anniversary</p>
+  </div>
+</section>
+
+<script>
+
+/* Popup + cinematic */
+function startSurprise() {
+  document.getElementById("popup").style.display = "none";
+  document.getElementById("cinematic").style.display = "flex";
+}
+
+/* Tap to enter site */
+function enterSite() {
+  document.getElementById("cinematic").style.display = "none";
+}
+
+/* Slideshow */
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlides() {
+  slides.forEach(slide => slide.classList.remove("active"));
+  index++;
+  if (index >= slides.length) index = 0;
+  slides[index].classList.add("active");
+}
+
+setInterval(showSlides, 3000);
+
+</script>
+
+</body>
+</html>
